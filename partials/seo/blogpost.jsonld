@@ -1,0 +1,39 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"{{config.site_url}}{{page.meta.path}}"
+    },
+    "headline": "{{page.meta.title}}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{config.site_url}}{{page.meta.image}}"
+    },
+    "datePublished": "{{page.meta.date_published}}",
+    "dateModified": "{{page.meta.date_modified}}",
+    "author": {
+      "@type": "Person",
+      "name": "Anjaneyulu Batta",
+      "sameAs": [
+        "https://www.linkedin.com/in/anjaneyulubatta505"
+      ]
+    },
+     "publisher": {
+      "@type": "Organization",
+      "name": "{{config.site_name}}",
+      "url": "{{config.site_url}}",
+      "sameAs": [
+        {% for social in config.extra.social %}
+        "{{ social.link }}"{%if not loop.last %},{% endif %}
+        {% endfor %}    
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{config.site_url}}{{config.theme.logo}}"
+      }
+    },
+    "description": "{{page.meta.description | safe}}"
+  }
+  </script>

@@ -1,0 +1,64 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "author": "Anjaneyulu Batta",
+      "copyrightHolder": {
+        "@id": "Anjaneyulu Batta"
+      },
+      "copyrightYear": "{{config.copyright_year}}",
+      "creator": {
+        "@id": "Anjaneyulu Batta"
+      },
+      "dateModified": "{{config.date_modified}}",
+      "datePublished": "{{config.date_published}}",
+      "description": "{{config.site_description}}",
+      "headline": "{{config.site_description}}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{config.site_url}}{{config.theme.logo}}"
+      },
+      "inLanguage": "en-us",
+      "mainEntityOfPage": "{{config.site_url}}",
+      "name": "{{config.site_description}}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{config.site_name}}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{config.site_url}}{{config.theme.logo}}"
+        }
+      },
+      "url": "{{config.site_url}}"
+    },
+    {
+      "@id": "{{config.site_url}}",
+      "name": "learnBATTA",
+      "@type": "LocalBusiness",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{config.site_url}}{{config.theme.logo}}"
+      }
+    },
+    {
+      "@id": "learnBATTA",
+      "@type": "Organization"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "description": "Breadcrumbs list",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "item": "{{config.site_url}}",
+          "name": "Homepage",
+          "position": 1
+        }
+      ],
+      "name": "Breadcrumbs"
+    }
+  ]
+}
+</script>
