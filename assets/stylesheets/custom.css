@@ -95,6 +95,12 @@ article figure.left {
 .cookiealert .acceptcookies {
     margin-left: 10px;
     vertical-align: baseline;
+    color: #fff;
+    background: green;
+    padding: 3px;
+    font-size: 13px;
+    border-radius: 2px;
+    font-weight: 600;
 }
 
 
