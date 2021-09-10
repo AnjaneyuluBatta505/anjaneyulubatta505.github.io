@@ -27,7 +27,8 @@
         <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>It&#39;s about me.<span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
     <span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
-</code></pre></div> <blockquote> <p>views.py</p> </blockquote> <div class=codehilite><pre><span></span><code><span class=kn>from</span> <span class=nn>django.views.generic</span> <span class=kn>import</span> <span class=n>Template</span>
+</code></pre></div> <blockquote> <p>views.py</p> </blockquote> <div class=codehilite><pre><span></span><code><span class=kn>from</span> <span class=nn>django.views.generic</span> <span class=kn>import</span> <span class=n>TemplateView</span>
+
 <span class=k>class</span> <span class=nc>AboutUs</span><span class=p>(</span><span class=n>TemplateView</span><span class=p>):</span>
     <span class=n>template_view</span> <span class=o>=</span> <span class=s2>&quot;about_us.html&quot;</span>
 </code></pre></div> <p>It's that simple to create about us page by using the generic <strong>TemplateView</strong> in django.</p> <h2 id=sending-extra-context-to-templateview>sending extra context to TemplateView<a class=headerlink href=#sending-extra-context-to-templateview title="Permanent link">&para;</a></h2> <p>We can send extra context to the template by overriding the method <code>get_context_data</code></p> <blockquote> <p>about_us.html</p> </blockquote> <div class=codehilite><pre><span></span><code><span class=p>&lt;</span><span class=nt>html</span><span class=p>&gt;</span>
@@ -37,7 +38,8 @@
         <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>{{content}}<span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
     <span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
 <span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
-</code></pre></div> <blockquote> <p>views.py</p> </blockquote> <div class=codehilite><pre><span></span><code><span class=kn>from</span> <span class=nn>django.views.generic</span> <span class=kn>import</span> <span class=n>Template</span>
+</code></pre></div> <blockquote> <p>views.py</p> </blockquote> <div class=codehilite><pre><span></span><code><span class=kn>from</span> <span class=nn>django.views.generic</span> <span class=kn>import</span> <span class=n>TemplateView</span>
+
 <span class=k>class</span> <span class=nc>AboutUs</span><span class=p>(</span><span class=n>TemplateView</span><span class=p>):</span>
     <span class=n>template_view</span> <span class=o>=</span> <span class=s2>&quot;about_us.html&quot;</span>
 
