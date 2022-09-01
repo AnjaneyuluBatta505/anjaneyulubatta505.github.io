@@ -56,7 +56,7 @@ article figure.left {
 
 .md-nav__item .md-nav__item {
     font-family: sans-serif;
-    list-style: square;
+    list-style: none;
     font-size: 15px;
     text-align: left;
 }
