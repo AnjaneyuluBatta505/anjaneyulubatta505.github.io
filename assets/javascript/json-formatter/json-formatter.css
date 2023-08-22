@@ -1,0 +1,24 @@
+/* global styles */
+.md-content {
+    margin-right: 0;
+}
+
+/* local styles */
+.error {
+    color: red;
+}
+#id_json_formatter_input textarea {
+    width: 100%;
+    height: 10rem;
+    background: #f0f0f03b;
+}
+#id_json_formatter_input textarea.error {
+    border: 2px solid red;
+}
+#id_json_formatter_output {
+    border: 1px solid #767676;
+    background: #f0f0f03b;
+}
+#id_json_formatter_output li {
+  list-style: none;
+}
