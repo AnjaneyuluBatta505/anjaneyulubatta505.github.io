@@ -13,7 +13,6 @@ function jsonInputChanged(e) {
   try {
     data = JSON.parse(dataStr);
   } catch (e) {
-    console.error(e);
     // SHOW ERROR
     $input.classList.add("error");
     $error.innerHTML = "Invalid JSON input. Failed to format the JSON";
@@ -29,7 +28,7 @@ function initJSONFormatter() {
   input.dispatchEvent(new Event("keyup"));
 }
 
+// INIT SCRIPT
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("document loaded");
   initJSONFormatter();
 });
