@@ -1,5 +1,15 @@
 #json-formatter-logo {
     background: #43a756;
     object-fit: contain;
-    padding: 10px;
+}
+.tools-list {
+  display: inline-block;
+}
+.item-box {
+  display: inline-block;
+  background: #43a756;
+  color: #fff !important;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
 }
