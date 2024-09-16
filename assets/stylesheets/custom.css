@@ -103,6 +103,25 @@ article figure.left {
     border-radius: 2px;
     font-weight: 600;
 }
-
-
+#ad-block-message {
+    display: none;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+#close-message {
+    background: #434a4e;
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+}
 /* end */
