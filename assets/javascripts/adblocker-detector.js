@@ -16,7 +16,7 @@ setTimeout(async function () {
   const isBlocked = await detectAdBlock();
   const adBlockDiv = document.getElementById("ad-block-message");
   const closeBtn = document.getElementById("close-message");
-  if (isBlocked) {
+  if (isBlocked && !window.location.host.startsWith("localhost")) {
     adBlockDiv.style.display = "block";
     closeBtn.addEventListener("click", () => {
       adBlockDiv.remove();
