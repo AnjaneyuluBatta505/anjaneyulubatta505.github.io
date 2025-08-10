@@ -39,6 +39,8 @@ class StringUtilsUI {
       { label: "Snake Case", action: () => this.snakeCase() },
       { label: "Lower Case", action: () => this.lowerCase() },
       { label: "Upper Case", action: () => this.upperCase() },
+      { label: "URL Encode", action: () => this.urlEncode() },
+      { label: "URL Decode", action: () => this.urlDecode() },
     ];
 
     this.buttons.forEach((btnData) => {
@@ -84,8 +86,8 @@ class StringUtilsUI {
 
   camelCase() {
     this.value = this.value
-      .replace(/[_\s]+/g, " ") // Treat underscores & spaces as same
-      .replace(/[^a-zA-Z0-9\s]/g, "") // Remove non-alphanumeric
+      .replace(/[_\s]+/g, " ")
+      .replace(/[^a-zA-Z0-9\s]/g, "")
       .toLowerCase()
       .split(/\s+/)
       .map((word, index) =>
@@ -96,10 +98,10 @@ class StringUtilsUI {
 
   snakeCase() {
     this.value = this.value
-      .replace(/([a-z])([A-Z])/g, "$1_$2") // Split camelCase
-      .replace(/[_\s]+/g, "_") // Replace spaces & underscores
-      .replace(/[^a-zA-Z0-9_]/g, "") // Remove non-alphanumeric
-      .replace(/_+/g, "_") // Collapse multiple underscores
+      .replace(/([a-z])([A-Z])/g, "$1_$2")
+      .replace(/[_\s]+/g, "_")
+      .replace(/[^a-zA-Z0-9_]/g, "")
+      .replace(/_+/g, "_")
       .toLowerCase();
   }
 
@@ -111,16 +113,19 @@ class StringUtilsUI {
     this.value = this.value.toUpperCase();
   }
 
-  createURL() {
-    let text = this.value.trim();
-    if (!/^https?:\/\//i.test(text)) {
-      text = "https://" + text;
-    }
+  urlEncode() {
     try {
-      new URL(text);
-      this.value = text;
+      this.value = encodeURIComponent(this.value);
     } catch {
-      alert("Invalid URL format");
+      alert("Failed to encode URL");
+    }
+  }
+
+  urlDecode() {
+    try {
+      this.value = decodeURIComponent(this.value);
+    } catch {
+      alert("Failed to decode URL");
     }
   }
 }
