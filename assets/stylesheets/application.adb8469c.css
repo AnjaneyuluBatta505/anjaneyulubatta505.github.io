@@ -1083,7 +1083,8 @@ html .md-footer-meta.md-typeset a:hover {
 .md-nav__list {
     margin: 0;
     padding: 0;
-    list-style: none
+    list-style: none;
+    height: 500px;
 }
 
 .md-nav__item {
