@@ -128,3 +128,6 @@ article figure.left {
 .md-nav__list.left-nav-list {
     height: 80vh;
 }
+.md-typeset hr, .md-typeset h1{
+    margin: 0;
+}
