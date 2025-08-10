@@ -125,3 +125,6 @@ article figure.left {
     font-weight: 900;
 }
 /* end */
+.md-nav__list.left-nav-list {
+    height: 80vh;
+}
