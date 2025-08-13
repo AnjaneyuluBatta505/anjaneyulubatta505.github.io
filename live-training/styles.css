@@ -1,0 +1,86 @@
+.add-in-auto, .md-sidebar__scrollwrap .md-nav.md-nav{
+  display: none;
+}
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.course-container {
+  background: #ffffff;
+  border: 1px solid #e5e7eb; /* light gray border */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.course-container a {
+  color: #fff;
+}
+
+.course-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.course-container .name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937; /* dark gray */
+}
+
+.course-container .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2563eb; /* blue */
+}
+
+.course-container .highlights {
+  padding-left: 20px;
+  margin: 0;
+  color: #4b5563; /* medium gray */
+  line-height: 1.5;
+}
+
+.course-container .highlights li {
+  margin-bottom: 6px;
+}
+
+.course-container .contact-whatsapp {
+  background: #25D366;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.course-container .contact-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+.course-container .more-info {
+  color: #2563eb;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  background: #f3f4f6; /* light gray background */
+  transition: background 0.2s ease;
+}
+
+.course-container .more-info:hover {
+  background: #e5e7eb;
+}
+.course-container .small-text {
+  font-size: 12px;
+  color: #1ebe5d;
+  font-weight: bold;
+}
