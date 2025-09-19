@@ -36,7 +36,12 @@
 .course-container .price {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2563eb; /* blue */
+  color: #2563eb;
+}
+
+.course-container .price .old {
+  text-decoration: line-through;
+  color: red;
 }
 
 .course-container .highlights {
